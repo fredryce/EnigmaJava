@@ -1,3 +1,3 @@
 # EnigmaJava
 Java Enigma machine
-![German Enigma machine](https://github.com/fredryce/LSTM-OPEN-pose/blob/master/exampleoutput.PNG)
+![German Enigma machine](https://github.com/fredryce/EnigmaJava/blob/main/exampleoutput.PNG)
