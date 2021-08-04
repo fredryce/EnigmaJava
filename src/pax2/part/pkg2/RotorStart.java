@@ -17,17 +17,17 @@ import static pax2.part.pkg2.Rotors.rotorChoice;
  *
  * @author Fred
  */
-public class RotorStart extends JPanel implements FocusListener{
+public class RotorStart extends JPanel implements FocusListener{  // this class responsible for setting the start position of the 3 rotors
     JComboBox inner1, inner2, inner3;
     JLabel innerName, middleName, outterName;
-    static int[] rotorStart = {0,0,0};
+    static int[] rotorStart = {0,0,0}; //keeps the rotor start position inside of the array as integers
     String[] options = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27"};
     public RotorStart(){
         setLayout(new GridLayout(2, 3, 10, 2));
         innerName = new JLabel("InnerRotor Starting");
         middleName = new JLabel("MiddleRotor Starting");
         outterName = new JLabel("OutterRotor Starting");
-        inner1 = new JComboBox(options);
+        inner1 = new JComboBox(options);                    //create 3 combo boxes for rotor starting choice
         inner2 = new JComboBox(options);
         inner3 = new JComboBox(options);
         inner1.setSelectedIndex(0);
@@ -51,7 +51,7 @@ public class RotorStart extends JPanel implements FocusListener{
     }
 
     @Override
-    public void focusLost(FocusEvent e) {
+    public void focusLost(FocusEvent e) {           // when focus lost set the rotor position and put them inside an array
         if(e.getSource() == inner1){
             rotorStart[0] = inner1.getSelectedIndex();
             

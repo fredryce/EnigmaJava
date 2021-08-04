@@ -1,8 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Xin Wang, Zack Fisher
+//Pax2Part2 Enigma Machines
+//10/13/2016
+//This project incorporates the use of GUI and how the German Enigma machine works. i hate history. 
+//Dr. DeenBushy Monday Wednesday 12:00 - 1:40
+
 package pax2.part.pkg2;
 
 import java.awt.BorderLayout;
@@ -21,13 +22,13 @@ import javax.swing.border.Border;
  *
  * @author xwang2945
  */
-public class Pax2Part2 extends JFrame{
+public class MyGUI extends JFrame{
     
 
     /**
      * @param args the command line arguments
      */
-    public Pax2Part2(){
+    public MyGUI(){           // Main frame that brings all the panels together.
         setTitle("Main Menu");
         // Specify an action for the close button.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -40,7 +41,7 @@ public class Pax2Part2 extends JFrame{
         setLayout(new BorderLayout());
 
         
-        MainPanel myButtons = new MainPanel();
+        ActionButton_PlugBoard myButtons = new ActionButton_PlugBoard();
         add(myButtons, BorderLayout.EAST);
         TextField mytext = new TextField();
         add(mytext, BorderLayout.NORTH);
@@ -48,6 +49,8 @@ public class Pax2Part2 extends JFrame{
         add(myrotor, BorderLayout.WEST);
         RotorStart mystart = new RotorStart();
         add(mystart, BorderLayout.SOUTH);
+        TextScroll mytxt = new TextScroll();
+        add(mytxt, BorderLayout.CENTER);
 
         pack();
         setSize(1000,700);
@@ -55,7 +58,7 @@ public class Pax2Part2 extends JFrame{
     }
     public static void main(String[] args) {
         // TODO code application logic here
-        Pax2Part2 mainMenu = new Pax2Part2();
+        MyGUI mainMenu = new MyGUI();
     }
 }
     
